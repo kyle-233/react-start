@@ -1,1 +1,1 @@
-npx --no -- commitlint --edit \
+npx --no-install commitlint --config commitlint.config.js --edit $1
