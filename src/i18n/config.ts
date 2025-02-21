@@ -17,10 +17,13 @@ const resources = {
   },
 }
 
+export const supportedLngs = ['en', 'zh']
+
 i18n
   .use(languageDetector)
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
+    supportedLngs,
     resources,
     interpolation: {
       escapeValue: false, // react already safes from xss
