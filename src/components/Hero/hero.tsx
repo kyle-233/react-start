@@ -8,7 +8,6 @@ import {
 import './hero.css'
 import { useEffect } from 'react'
 export const Hero = () => {
-  console.log(THREE)
   useEffect(() => {
     // document.addEventListener('DOMContentLoaded', () => {
     const scene = new THREE.Scene()
@@ -83,7 +82,7 @@ export const Hero = () => {
 
     const fontSize = Math.round(250 * window.devicePixelRatio)
     ctx.fillStyle = '#fef4b8'
-    ctx.font = `bold ${fontSize}px Text Sohne`
+    ctx.font = `bold ${fontSize}px Signika Negative`
     ctx.textAlign = 'center'
     ctx.textBaseline = 'middle'
     ctx.textRendering = 'geometricPrecision'
@@ -112,7 +111,7 @@ export const Hero = () => {
 
       const newFontSize = Math.round(250 * window.devicePixelRatio)
       ctx.fillStyle = '#fef4b8'
-      ctx.font = `bold ${newFontSize}px Text Sohne`
+      ctx.font = `bold ${newFontSize}px Signika Negative`
       ctx.textAlign = 'center'
       ctx.textBaseline = 'middle'
       ctx.fillText('softhorizon', newWidth / 2, newWidth / 2)
@@ -120,11 +119,28 @@ export const Hero = () => {
       textTexture.needsUpdate = true
     })
 
-    renderer.domElement.addEventListener('mousemove', (e) => {
+    interface MouseMoveEvent extends MouseEvent {
+      clientX: number
+      clientY: number
+    }
+
+    const mouseMove = (e: MouseMoveEvent) => {
       mouse.x = e.clientX * window.devicePixelRatio
       mouse.y = (window.innerHeight - e.clientY) * window.devicePixelRatio
-    })
+    }
 
+    // renderer.domElement.addEventListener('mousedown', () => {
+    //   renderer.domElement.addEventListener('mousemove', mouseMove)
+    // })
+
+    // renderer.domElement.addEventListener('click', mouseMove)
+
+    // renderer.domElement.addEventListener('mouseup', () => {
+    //   mouse.set(0, 0)
+    //   renderer.domElement.removeEventListener('mousemove', mouseMove)
+    // })
+
+    renderer.domElement.addEventListener('mousemove', mouseMove)
     renderer.domElement.addEventListener('mouseleave', () => {
       mouse.set(0, 0)
     })
@@ -165,7 +181,7 @@ export const Hero = () => {
           <button>Try now</button>
         </div>
       </nav>
-
+      <div className=""></div>
       <footer>
         <h1>Expanding perspectives with serene and boundless possibilities</h1>
         <div className="footer-links">

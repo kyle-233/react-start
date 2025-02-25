@@ -19,6 +19,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   z-index: 2;
+  pointer-events: none;
 }
 
 .nav-items {
@@ -33,7 +34,7 @@ button {
   border-radius: 2em;
   color: #fef4b8;
   background-color: transparent;
-  font-family: 'Test Sohne';
+  font-family: 'Signika Negative', serif;
   font-size: 15px;
   padding: 0.5em 1em;
 }
@@ -48,6 +49,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   z-index: 2;
+  pointer-events: none;
 }
 
 footer h1 {
@@ -65,4 +67,5 @@ canvas {
   left: 0;
   width: 100vw;
   height: 100vh;
+  z-index: 1;
 }
