@@ -10,16 +10,18 @@ export const ScrollStep = () => {
   useEffect(() => {
     const lenis = new Lenis()
     lenis.on('scroll', ScrollTrigger.update)
+
     gsap.ticker.add((time) => {
       lenis.raf(time * 1000)
     })
     gsap.ticker.lagSmoothing(0)
 
     const stickySection = document.querySelector('.steps')
-    const stickyHeight = window.innerHeight * 7
+    const stickyHeight = window.innerHeight * 5
     const cards = document.querySelectorAll('.card')
     const countContainer = document.querySelector('.count-container')
     const totalCards = cards.length
+
     ScrollTrigger.create({
       trigger: stickySection,
       start: 'top top',
@@ -30,6 +32,7 @@ export const ScrollStep = () => {
         positionCards(self.progress)
       },
     })
+
     const getRadius = () => {
       return window.innerWidth < 900
         ? window.innerWidth * 7.5
@@ -202,6 +205,7 @@ export const ScrollStep = () => {
           <div className="card empty"></div>
         </div>
       </section>
+
       <section className="outro">
         <p>
           Our 3D design tool id built to enhance your creative workflow,{' '}
