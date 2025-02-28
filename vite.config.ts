@@ -10,6 +10,9 @@ export default defineConfig({
     globals: true,
     environment: 'happy-dom',
     // setupFiles: '.vitest/setup',
-    include: ['**/test.{ts,tsx}'],
+    coverage: {
+      provider: 'istanbul',
+    },
+    include: ['src/**/*.test.{js,ts,jsx,tsx}'],
   },
 })

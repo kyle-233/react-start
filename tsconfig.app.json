@@ -20,7 +20,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    "types": ["vitest/globals"] // 添加 vitest/globals 以识别全局测试函数
   },
   "include": ["src"]
 }
