@@ -22,7 +22,12 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
-    "types": ["vitest/globals"] // 添加 vitest/globals 以识别全局测试函数
+    "types": ["vitest/globals"], // 添加 vitest/globals 以识别全局测试函数
+
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": ["src"]
 }
