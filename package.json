@@ -14,6 +14,8 @@
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "gsap": "^3.12.7",
     "i18next": "^24.2.2",
     "i18next-browser-languagedetector": "^8.0.4",
     "i18next-chained-backend": "^4.6.2",

@@ -1,15 +1,9 @@
 import './App.css'
-import { useTranslation } from 'react-i18next'
-import { LngSelect } from './components/lng-select'
+
+// import { Hero } from './components/hero/hero'
 
 function App() {
-  const { t } = useTranslation('translation')
-  return (
-    <div>
-      <LngSelect />
-      {t('edit')}
-    </div>
-  )
+  return <>{/* <Hero /> */}</>
 }
 
 export default App

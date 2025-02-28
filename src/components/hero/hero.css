@@ -1,0 +1,31 @@
+.hero-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+#wave-container {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+.detail-container {
+  position: relative;
+  z-index: 3;
+  pointer-events: none;
+  background-color: transparent;
+}
+.box {
+  background-color: #0ae448 !important;
+  position: relative;
+  border-radius: 5px;
+}
+.box:before {
+  padding-top: 100%;
+  content: '';
+  display: block;
+}

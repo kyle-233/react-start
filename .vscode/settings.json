@@ -7,5 +7,5 @@
     "editor.formatOnSaveMode": "file",
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "cSpell.words": ["commitlint"]
+  "cSpell.words": ["commitlint", "yoyo"]
 }
