@@ -3,7 +3,7 @@ import App from './App.tsx'
 import '@testing-library/jest-dom'
 
 describe('App', () => {
-  it('render hello vitest', () => {
+  test('render hello vitest', () => {
     render(<App />)
     expect(screen.getByText('Hello Vitest')).toBeInTheDocument()
   })
