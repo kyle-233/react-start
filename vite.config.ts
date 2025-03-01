@@ -12,7 +12,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
     dedupe: ['react', 'react-dom'],
-    extensions: ['tsx', '.ts', '.jsx', '.js', '.json'],
+    extensions: ['.tsx', '.ts', '.jsx', '.js', '.json'],
   },
   test: {
     globals: true,
