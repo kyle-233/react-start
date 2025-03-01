@@ -16,6 +16,7 @@ export default defineConfig({
   },
   test: {
     globals: true,
+    reporters: [['verbose', { summary: false }]],
     environment: 'happy-dom',
     // setupFiles: '.vitest/setup',
     coverage: {
